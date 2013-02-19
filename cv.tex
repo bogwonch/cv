@@ -1,0 +1,167 @@
+\documentclass{book}
+
+\usepackage{paralist}
+\usepackage{hyperref}
+\usepackage{geometry}
+\usepackage{marginal}
+\usepackage{marginnote}
+\usepackage[usenames,dvipsnames]{xcolor}
+\usepackage{fontspec}
+
+\pagestyle{empty}
+\setlength{\parindent}{0pt}
+\geometry{marginparwidth=2.0in, marginparsep=2em, 
+          inner=7.0em,outer=1.8in, bottom=2em, 
+          top=4em, textheight=290mm}
+
+
+\newcommand{\lowercaps}[1]{\textsc{\MakeLowercase{#1}}}
+%\renewcommand{\labelitemi}{}
+
+%\setmainfont{OFL Sorts Mill Goudy TT}
+\setmainfont{EB Garamond}
+\newcommand{\flower}[1]{{\fontspec[Scale=MatchUppercase]{IM FELL FLOWERS 2}#1}}
+
+\newcommand{\heading}[1]{{{\color{BrickRed}\hspace{1em}\Huge #1}\vspace{0.5em}}}
+\newcommand{\sideheading}[1]{\vspace{0.5em}\marginnote[\color{BrickRed}\raggedleft\lowercaps{#1}]{\raggedleft\lowercaps{#1}}}
+\newcommand{\email}[1]{\href{mailto:#1}{#1}}
+\newcommand{\postcode}[1]{\lowercaps{#1}}
+\newcommand{\listhead}[1]{#1}
+
+\newcommand{\hidethis}[1]{}
+
+\begin{document}
+Ignore this page.  I'll get rid of it.
+\newpage
+
+\heading{Joseph~Hallett}
+
+\begin{tabular}{l@{\hspace{12em}} l@{\hspace{1em}} l}
+Basement Flat & \textsc{telephone:} & 07986 647065 \\
+6 Buckingham Place & \textsc{email:} & \email{josephhallett@gmail.com} \\
+Clifton, Bristol, \postcode{bs81lh} & &  \\
+\end{tabular}
+
+\vspace{2em}
+\begin{tabular}{p{\textwidth}}\itshape
+	I am a recently graduate of Bristol University specializing in computer
+	security.  I currently work for an Embedded Linux consultency as a
+	security engineer.  I work with conditional access vendors to develop
+	their Linux and Android security specifications and develop in kernel
+	dynamic analysis tools.  I enjoy solving tricky problems with code and
+	in university I helped teach problem solving skills to others.  I want
+	to continue to develop my understanding of computer and information
+	security, developing tools and research in industry and academia and to
+	show others just how fascinating security research is.
+\end{tabular}
+\vspace{0.5em}
+
+\begin{itemize}
+   \item 
+     \sideheading{Education}%
+     \listhead{2012\hspace{1em}MEng Computer Science at Bristol University (second class honors first division)}
+     \begin{itemize}
+       \item[] Specialised in cryptography and security.
+       \item[] Won the Infineon Prize for best final year project in Computer Architecture.
+       \item[] Wrote thesis on a steganographic method to create architecture independent bytecode.
+       Looked at the techniques to find valid instructions on multiple
+       architectures, assessed their steganographic properties, and showed how
+       a distinguisher could be written for programs using them.
+     \end{itemize}
+   %\item \listhead{2006\hspace{1em}A-levels in mathematics (A), physics (B), chemistry (B) and philosophy (C)}
+\end{itemize}
+ 
+\begin{itemize}
+  \item 
+    \sideheading{Experience}%
+    \listhead{2012–present\hspace{1em}Security Engineer at MathEmbedded}
+    \begin{itemize}
+      \item[] Developed Linux and Android security specifications for conditional access vendors.  
+      \item[] Worked to create a dynamic analysis tool for assessing a systems
+	      conformance to the security specifications.  Involved writing a
+	      kernel module and rootkit to hook into the system under test, and
+	      SQL database to implement the tests
+      \item[] Updating a set-top box system to a more modern kernel.  Rewrote
+	      BSP to support new kernel; integrated Grsecurity patch set to
+	      harden system; helped port their main application from a chroot
+	      into an LXC container.
+    \end{itemize}
+
+    \item\listhead{2009–2012\hspace{1em}Unit Assistant at Bristol~University}
+    \begin{itemize}
+      \item[] Worked for the \textit{Procedural Programming} and \textit{Principles of Programming} units.
+      \item[] Responsible for weekly lab sessions assisting first year students
+        in completing coursework, overseeing tests, and giving a viva for the
+        final assessment.
+    \end{itemize}
+
+  \item \listhead{2008\hspace{1em}Software Engineering intern at GE Oil and Gas}
+    \begin{itemize}
+      \item[] Year in industry
+      \item[] Worked on testing sub-sea~software, development of coding
+        standards for C++~\&~Visual~Basic inside GE~Oil~and~Gas as well as the
+        development of automatic testing equipment for watchdog PLCs.
+        Witnessed the testing of several hardware and software
+        projects.
+      \item[] I was awarded a 2:1 for my year of work and report on the design
+        and implementation of automatic test equipment.
+    \end{itemize}
+
+  \item \listhead{2007\hspace{1em}Software Engineering intern at Renishaw}
+    \begin{itemize}
+      \item[] Summer Placement Worked on soldering and testing PCBs as well
+	      as modelling the effects of temperature on equipment.
+    \end{itemize}
+\end{itemize}
+
+\sideheading{Technical Skills}
+
+\begin{tabular}{p{0.3\textwidth}@{\hspace{1em}} p{0.7\textwidth}}
+	\textsc{experience with:} & Linux kernel development, Linux system development, Grsecurity patches, OpenCL, OpenMP, MPI, Git, Radare2\\
+	\textsc{programming languages:} & C, C++, Assembly languages, Shell-scripting, Python, Ruby, Matlab, SQL~(Oracle and MySQL),  Haskell, Java, Prolog, Common Lisp, R and \LaTeX \\
+\end{tabular}
+
+\vspace{2em}
+\newpage
+\sideheading{References}
+
+\newcommand{\RTitle}[1]{\small\textit{#1}}
+\newcommand{\RName}[1]{\textbf{#1}\newline}
+\newcommand{\RAddress}[1]{\vspace{0.5em}\newline\small{#1}}
+\newcommand{\RNumber}[1]{\vspace{0.5em}#1\newline}
+\newcommand{\REmail}[1]{\email{#1}}
+
+\begin{tabular}{p{0.3\textwidth} p{0.3\textwidth} p{0.3\textwidth}}
+  {%
+    \RName{Dr{.}~Dan~Page}
+    \RTitle{Lecturer in Computer Science}
+    \RAddress{Department of Computer Science\newline
+     University of Bristol\newline
+     Merchant Venturers Building\newline
+     Woodland Road\newline
+     Bristol\newline
+     \postcode{BS8 1UB}\newline
+    }
+    \RNumber{01173 315146}\REmail{page@cs.bris.ac.uk}
+  }
+
+  &
+  {%
+    \RName{Dr{.}~Ian~Holyer}
+    \RTitle{Personal Tutor}
+    \RAddress{Department of Computer Science\newline
+     University of Bristol\newline
+     Merchant Venturers Building\newline
+     Woodland Road\newline
+     Bristol\newline
+     \postcode{BS8 1UB}\newline
+    }
+    \RNumber{01179 545148}\REmail{ian.holyer@bris.ac.uk}
+  }
+
+\end{tabular}
+
+
+
+\end{document}  
+
