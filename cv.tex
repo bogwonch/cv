@@ -1,4 +1,4 @@
-\documentclass{book}
+\documentclass[10pt,selectp]{book}
 
 \usepackage{paralist}
 \usepackage{hyperref}
@@ -7,19 +7,25 @@
 \usepackage{marginnote}
 \usepackage[usenames,dvipsnames]{xcolor}
 \usepackage{fontspec}
+\usepackage{selectp}
+
+\outputonly{2}
 
 \pagestyle{empty}
 \setlength{\parindent}{0pt}
-\geometry{marginparwidth=2.0in, marginparsep=2em, 
+\geometry{marginparwidth=1.5in, marginparsep=2em, 
           inner=7.0em,outer=1.8in, bottom=2em, 
-          top=4em, textheight=290mm}
+          top=2em, textheight=290mm}
 
+\usepackage{enumitem}
+\setlist{itemsep=.3em,topsep=.3em}
 
 \newcommand{\lowercaps}[1]{\textsc{\MakeLowercase{#1}}}
 %\renewcommand{\labelitemi}{}
 
 %\setmainfont{OFL Sorts Mill Goudy TT}
-\setmainfont{EB Garamond}
+\setmainfont{Directa Serif}
+\setmonofont[Scale=MatchLowercase]{PragmataPro}
 \newcommand{\flower}[1]{{\fontspec[Scale=MatchUppercase]{IM FELL FLOWERS 2}#1}}
 
 \newcommand{\heading}[1]{{{\color{BrickRed}\hspace{1em}\Huge #1}\vspace{0.5em}}}
@@ -38,27 +44,35 @@ Ignore this page.  I'll get rid of it.
 
 \begin{tabular}{l@{\hspace{12em}} l@{\hspace{1em}} l}
 Basement Flat & \textsc{telephone:} & 07986 647065 \\
-6 Buckingham Place & \textsc{email:} & \email{josephhallett@gmail.com} \\
-Clifton, Bristol, \postcode{bs81lh} & &  \\
+6 Buckingham Place & \textsc{email:} & \email{\tt josephhallett@gmail.com} \\
+Clifton, Bristol, \postcode{bs8 1lh} & \textsc{github:} & \href{https://www.github.com/bogwonch}{\tt github.com/bogwonch} \\
 \end{tabular}
 
-\vspace{2em}
+\vspace{1em}
 \begin{tabular}{p{\textwidth}}\itshape
-	I am a recently graduate of Bristol University specializing in computer
-	security.  I currently work for an Embedded Linux consultency as a
-	security engineer.  I work with conditional access vendors to develop
-	their Linux and Android security specifications and develop in kernel
-	dynamic analysis tools.  I enjoy solving tricky problems with code and
-	in university I helped teach problem solving skills to others.  I want
-	to continue to develop my understanding of computer and information
-	security, developing tools and research in industry and academia and to
-	show others just how fascinating security research is.
+  I am a PhD student at the University of Edinburgh researching how digital
+  evidence can be used to improve the security for app stores.  My research
+  covers topics from information security, hacking and malware and logic and
+  theorem proving.  I have experience working as a Linux security engineer for
+  the digital television markets where I helped write the Linux and Android
+  specifications for conditional access vendors.  My passion is for cutting
+  edge security research and helping users and developers understand the issues
+  and limitations of the security of their devices. Through my teaching I have
+  helped show others just how cool security research is.
 \end{tabular}
-\vspace{0.5em}
+\vspace{0.3em}
 
 \begin{itemize}
    \item 
      \sideheading{Education}%
+     \listhead{2013\hspace{1em}\emph{Currently studying for} PhD at Edinburgh
+       University School of Informatics}
+     \begin{itemize}
+       \item[] Expected 2017.
+       \item[] Working in the \emph{AppGuarden} project developing an evidence
+         based secure app store.
+       \item[] Supervised by Dr.~David~Aspinall
+     \end{itemize}
      \listhead{2012\hspace{1em}MEng Computer Science at Bristol University (second class honors first division)}
      \begin{itemize}
        \item[] Specialised in cryptography and security.
@@ -74,7 +88,11 @@ Clifton, Bristol, \postcode{bs81lh} & &  \\
 \begin{itemize}
   \item 
     \sideheading{Experience}%
-    \listhead{2012–present\hspace{1em}Security Engineer at MathEmbedded}
+    \listhead{2014\hspace{1em}Teaching Assistant at Edinburgh~University}
+    \begin{itemize}
+        \item[] Developed labs for new \emph{Secure Programming} course.
+    \end{itemize}
+    \listhead{2012–2013\hspace{1em}Security Engineer at MathEmbedded}
     \begin{itemize}
       \item[] Developed Linux and Android security specifications for conditional access vendors.  
       \item[] Worked to create a dynamic analysis tool for assessing a systems
@@ -90,9 +108,7 @@ Clifton, Bristol, \postcode{bs81lh} & &  \\
     \item\listhead{2009–2012\hspace{1em}Unit Assistant at Bristol~University}
     \begin{itemize}
       \item[] Worked for the \textit{Procedural Programming} and \textit{Principles of Programming} units.
-      \item[] Responsible for weekly lab sessions assisting first year students
-        in completing coursework, overseeing tests, and giving a viva for the
-        final assessment.
+      %\item[] Responsible for weekly lab sessions assisting first year students in completing coursework, overseeing tests, and giving a viva for the final assessment.
     \end{itemize}
 
   \item \listhead{2008\hspace{1em}Software Engineering intern at GE Oil and Gas}
@@ -114,11 +130,13 @@ Clifton, Bristol, \postcode{bs81lh} & &  \\
     \end{itemize}
 \end{itemize}
 
+\reversemarginpar
 \sideheading{Technical Skills}
-
 \begin{tabular}{p{0.3\textwidth}@{\hspace{1em}} p{0.7\textwidth}}
-	\textsc{experience with:} & Linux kernel development, Linux system development, Grsecurity patches, OpenCL, OpenMP, MPI, Git, Radare2\\
-	\textsc{programming languages:} & C, C++, Assembly languages, Shell-scripting, Python, Ruby, Matlab, SQL~(Oracle and MySQL),  Haskell, Java, Prolog, Common Lisp, R and \LaTeX \\
+	\textsc{experience with:} & Linux kernel development, Android Development,
+  Linux system development, Grsecurity, OpenCL, OpenMP, MPI, Git, Radare2\\
+	\textsc{programming languages:} & C, C++, Assembly languages, Python, Ruby,
+  SQL, Haskell, Java, Prolog, Lisp, Matlab, R and \LaTeX \\
 \end{tabular}
 
 \vspace{2em}
@@ -131,35 +149,35 @@ Clifton, Bristol, \postcode{bs81lh} & &  \\
 \newcommand{\RNumber}[1]{\vspace{0.5em}#1\newline}
 \newcommand{\REmail}[1]{\email{#1}}
 
-\begin{tabular}{p{0.3\textwidth} p{0.3\textwidth} p{0.3\textwidth}}
-  {%
-    \RName{Dr{.}~Dan~Page}
-    \RTitle{Lecturer in Computer Science}
-    \RAddress{Department of Computer Science\newline
-     University of Bristol\newline
-     Merchant Venturers Building\newline
-     Woodland Road\newline
-     Bristol\newline
-     \postcode{BS8 1UB}\newline
-    }
-    \RNumber{01173 315146}\REmail{page@cs.bris.ac.uk}
-  }
-
-  &
-  {%
-    \RName{Dr{.}~Ian~Holyer}
-    \RTitle{Personal Tutor}
-    \RAddress{Department of Computer Science\newline
-     University of Bristol\newline
-     Merchant Venturers Building\newline
-     Woodland Road\newline
-     Bristol\newline
-     \postcode{BS8 1UB}\newline
-    }
-    \RNumber{01179 545148}\REmail{ian.holyer@bris.ac.uk}
-  }
-
-\end{tabular}
+%\begin{tabular}{p{0.3\textwidth} p{0.3\textwidth} p{0.3\textwidth}}
+%  {%
+%    \RName{Dr{.}~Dan~Page}
+%    \RTitle{Lecturer in Computer Science}
+%    \RAddress{Department of Computer Science\newline
+%     University of Bristol\newline
+%     Merchant Venturers Building\newline
+%     Woodland Road\newline
+%     Bristol\newline
+%     \postcode{BS8 1UB}\newline
+%    }
+%    \RNumber{01173 315146}\REmail{page@cs.bris.ac.uk}
+%  }
+%
+%  &
+%  {%
+%    \RName{Dr{.}~Ian~Holyer}
+%    \RTitle{Personal Tutor}
+%    \RAddress{Department of Computer Science\newline
+%     University of Bristol\newline
+%     Merchant Venturers Building\newline
+%     Woodland Road\newline
+%     Bristol\newline
+%     \postcode{BS8 1UB}\newline
+%    }
+%    \RNumber{01179 545148}\REmail{ian.holyer@bris.ac.uk}
+%  }
+%
+%\end{tabular}
 
 
 
