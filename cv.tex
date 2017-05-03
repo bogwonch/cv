@@ -1,9 +1,10 @@
 \documentclass[a4paper,10pt,selectp]{book}
 
 \usepackage{paralist}
-\usepackage{hyperref}
+\usepackage[hidelinks]{hyperref}
 \usepackage{geometry}
 \usepackage{marginal}
+%\usepackage{microtype}
 \usepackage{marginnote}
 \usepackage[usenames,dvipsnames]{xcolor}
 \usepackage{fontspec}
@@ -14,8 +15,8 @@
 \pagestyle{empty}
 \setlength{\parindent}{0pt}
 \geometry{marginparwidth=1.5in, marginparsep=2em, 
-  inner=7.0em,outer=1.8in, bottom=2em, 
-  top=3em, textheight=290mm}
+  inner=7.0em,outer=1.8in, %bottom=2em, 
+  top=2em, textheight=290mm}
 
 \usepackage{enumitem}
 \usepackage{paralist}
@@ -24,7 +25,7 @@
 \newcommand{\lowercaps}[1]{\textsc{\MakeLowercase{#1}}}
 % \renewcommand{\labelitemi}{}
 
-% \setmainfont{OFL Sorts Mill Goudy TT}
+%\setmainfont{OFL Sorts Mill Goudy TT}
 \setmainfont{Directa Serif}
 \setmonofont[Scale=MatchLowercase]{PragmataPro}
 \newcommand{\flower}[1]{{\fontspec[Scale=MatchUppercase]{IM FELL FLOWERS 2}#1}}
@@ -41,171 +42,185 @@
 Ignore this page.  I'll get rid of it.
 \newpage
 
+    \marginnote[\color{BrickRed}\hspace{1em}\Huge \flower A]{\color{BrickRed}\hspace{1em}\Huge \flower a}
 \heading{Joseph~Hallett}
 
-\begin{tabular}{l@{\hspace{12em}} l@{\hspace{1em}} l}
+\begin{tabular}{l@{\hspace{11em}} l@{\hspace{1em}} l}
   Basement Flat & \textsc{telephone:} & 07986 647065 \\
   6 Buckingham Place & \textsc{email:} & \email{\tt josephhallett@gmail.com} \\
   Clifton, Bristol, \postcode{bs8 1lh} & \textsc{github:} & \href{https://www.github.com/bogwonch}{\tt github.com/bogwonch} \\
 \end{tabular}
 
-\vspace{1em} \begin{tabular}{p{\textwidth}}\itshape I am a PhD student at the
-               University of Edinburgh researching how we can use a logic of authorization to
-               improve the security in mobile ecosystems.  My research looks at how we can
-               write policies, for the devices and stores, that let us automate or
-               guide the decisions making process surrounding them; and model existing
-               informal policies.  I have experience working as a Linux
-               security engineer for the digital television markets where I helped write the
-               Linux and Android specifications for conditional access vendors.  My passion
-               is for cutting edge security research and helping users and developers
-               understand the issues and limitations of the security of their devices.
-               Through my teaching I have helped show others just how cool security research
-               is.  \end{tabular} \vspace{0.3em}
+\vspace{1em}%
+\begin{tabular}{p{\textwidth}}\itshape
+%  I am a PhD student at the University of Edinburgh researching how we can use a logic of authorization to
+%  improve the security in mobile ecosystems.  My research looks at how we can
+%  write policies, for the devices and stores, that let us automate or
+%  guide the decisions making process surrounding them; and model existing
+%  informal policies.  I have experience working as a Linux
+%  security engineer for the digital television markets where I helped write the
+%  Linux and Android specifications for conditional access vendors.  My passion
+%  is for cutting edge security research and helping users and developers
+%  understand the issues and limitations of the security of their devices.
+%  Through my teaching I have helped show others just how cool security research
+%  is.
+  I am a PhD student at the University of Edinburgh expecting to
+submit in June.  My research looks at using
+formal languages to model the informal policies and trust
+relationships that surround mobile devices.  By doing this we were
+able to make precise comparisons between different app stores and
+mobile OSs, check the extent user's privacy preferences matched their
+behaviour, and find common areas of concern in BYOD policies.  My
+background is in computer security; this has given me the
+opportunities to work in a variety of areas including policy
+languages, system engineering, embedded devices, program analysis and
+testing.  Now I'm coming to the end of my PhD I am looking to move
+back into industry and start working on new problems and continue to
+explore and show other how cool software engineering is.
+\end{tabular} \vspace{0.2em}
 
-             \begin{itemize}
-             \item[] 
-               \sideheading{Education}%
-               \listhead{2017\hspace{1em} PhD at Edinburgh University School of Informatics}
-               \begin{itemize}
-               \item[] Describing and enforcing policies in mobile ecosystems.
-               \item[] Implemented \emph{AppPAL} authorization logic in Java/Haskell.
-               \item[] Supervised by Prof.~David~Aspinall
-               \end{itemize}
-               \listhead{2012\hspace{1em}MEng Computer Science at Bristol University (second class honors first division)}
-               \begin{itemize}
-               \item[] Specialised in cryptography and security.
-               \item[] Won the Infineon Prize for best final year project in Computer Architecture.
-               \item[] Dissertation on a steganographic method to create architecture independent bytecode.
-                 % Looked at the techniques to find valid instructions on multiple
-                 % architectures, assessed their steganographic properties, and showed how
-                 % a distinguisher could be written for programs using them.
-               \end{itemize}
-               % \item[] \listhead{2006\hspace{1em}A-levels in mathematics (A), physics (B), chemistry (B) and philosophy (C)}
-             \end{itemize}
-             
-             \begin{itemize}
-             \item[] 
-               \sideheading{Experience}%
-               \listhead{2014\hspace{1em}Teaching Assistant at Edinburgh~University}
-               \begin{itemize}
-               \item[] Developed new lab for Intel about certificate
-                 pinning on Android.
-               \item[] Developed new labs for new \emph{Secure Programming} course.
-                 Labs involved teaching students to perform and defend against classic stack
-                 overflows, return to libc, linker attacks, injection and web
-                 attacks.
-               \item[] Teaching Assistant for \emph{Computer Security}.
-               \end{itemize}
-               \listhead{2012–2013\hspace{1em}Security Engineer at MathEmbedded}
-               \begin{itemize}
-               \item[] Developed Linux and Android security specifications for conditional access vendors.  
-               \item[] Worked to create a dynamic analysis tool for assessing a systems
-                 conformance to the security specifications.  Involved writing a
-                 kernel module and rootkit to hook into the system under test, and
-                 SQL database to implement the tests
-               \item[] Updating a set-top box system to a more modern kernel.  Rewrote
-                 BSP to support new kernel; integrated Grsecurity patch set to
-                 harden system; helped port their main application from a chroot
-                 into an LXC container.
-               \end{itemize}
+\begin{itemize}
+\item[] 
+  \sideheading{Education}%
+  \listhead{2017\hspace{1em} PhD at Edinburgh University School of Informatics}
+  \begin{itemize}
+  \item[] Looked at how authorization logic can be used to model the informal policies surrounding the mobile ecosystem, and describe precisely the differences.  This led to full publications contrasting user's privacy preferences with their app installation habits (AppPAL for Android), and describing precisely the concerns and trust relationships in BYOD policies (Capturing Policies for BYOD).
+  \item[] Implemented \emph{AppPAL} authorization logic in Java/Haskell.
+  \item[] Supervised by Prof.~David~Aspinall
+  \end{itemize}
+  \listhead{2012\hspace{1em}MEng Computer Science at Bristol University (2:1)}
+  \begin{itemize}
+  \item[] Specialised in cryptography and security.
+  \item[] Won the Infineon Prize for best final year project in Computer Architecture.
+  \item[] Dissertation on a steganographic method to create architecture independent bytecode.
+    % Looked at the techniques to find valid instructions on multiple
+    % architectures, assessed their steganographic properties, and showed how
+    % a distinguisher could be written for programs using them.
+  \end{itemize}
+  % \item[] \listhead{2006\hspace{1em}A-levels in mathematics (A), physics (B), chemistry (B) and philosophy (C)}
+\end{itemize}
 
-             \item[] \listhead{2009–2012\hspace{1em}Teaching Assistant at
-                 Bristol~University (Procedural Programming and Principles of
-                 Programming courses)}
+\begin{itemize}
+\item[] 
+  \sideheading{Experience}%
+  \listhead{2014--2016\hspace{1em}Teaching Assistant at Edinburgh~University}
+  \begin{itemize}
+  \item[] Worked with Intel to create lab exercise using TLS securely and implementing certificate pinning in Android apps.
+  \item[] Developed new labs teaching students to perform and defend against classic stack
+    overflows, return to libc, linker attacks, injection and web vulnerabilities.
+  \item[] Working for the \emph{Computer Security} and \emph{Secure Programming Courses}.
+  \end{itemize}
+  \listhead{2012–2013\hspace{1em}Security Engineer at MathEmbedded}
+  \begin{itemize}
+  \item[] Developed Linux and Android security specifications for conditional access vendors.  
+  \item[] Worked on a dynamic analysis tool for assessing a system's
+    conformance to the security specifications.  Helped develop a
+    kernel module and rootkit to hook into the system under test, and
+    SQL database to implement the tests.  Built test framework to test the tool worked as expected on multiple architectures and OSs.
+  \item[] Updated a set-top box system to a more recent kernel. Integrated patches to
+    harden system; helped port their main application from a chroot into an LXC container.
+  \end{itemize}
 
-             \item[] \listhead{2008\hspace{1em}Software Engineering intern at GE Oil and Gas}
-               \begin{itemize]
-                 \item[] Worked]on testing, developing of coding
-                   standards fo] C++~\&~Visual~Basic and the
-                   development ]f automatic testing equipment for PLCs.
-                 \end{itemize}
+\item[] \listhead{2009–2012\hspace{1em}Teaching Assistant at
+    Bristol~University}
+    \begin{itemize}
+    \item[] Procedural Programming and Principles of Programming courses
+    \end{itemize}
 
-               \item[] \listhea]{2007\hspace{1em}Summer placement as Software Engineer at Renishaw}
-                 % \begin{itemi]e}
-                 % \item[] Summ]r Placement Worked on soldering and testing PCBs as well
-                 %   as modelli]g the effects of temperature on equipment.
-                 % \end{itemize]
-               \end{itemize}
+\item[] \listhead{2008\hspace{1em}Software Engineering intern at GE Oil and Gas}
+  \begin{itemize}
+    \item[] Worked on testing, bugfixing, and developing coding standards for C++.
+  \end{itemize}
 
-               \begin{itemize}
-                 \sideheading{Publications}%
-               \item[] \listhead{(All publications authored by Joseph Hallett and David Aspinall)}
-               \item Capturing ]olicies for BYOD. IFIP-Sec (2017)
-               \item \emph{(Short Paper)} Common Concerns in BYOD Policies. IMPS Workshop (2017)
-               \item \emph{(Presentation)} Specifying BYOD Policies With
-                 Authorization Logic. iFM PhD Symposium (2016)
-               \item AppPAL for Android.  ESSoS (2016).
-               \item \emph{(Poster)} Using Authorization Logic to Capture User
-                 Policies in Mobile Ecosystems. SOUPS (2015)
-               \item Towards an Authorization Framework for App Security
-                 Checking.  ESSoS Doctoral
-                 Symposium (2014).
-               \end{itemize}
+\item[] \listhead{2007\hspace{1em}Summer placement as Software Engineer at Renishaw}
+    % \begin{itemi]e}
+    % \item[] Summ]r Placement Worked on soldering and testing PCBs as well
+    %   as modelli]g the effects of temperature on equipment.
+    % \end{itemize]
+\end{itemize}
 
-               \begin{inparaitem}
-                 \sideheading{Technical Skills}
-               \item[\hspace{1em}]Linux Kernel
-               \item[\hspace{1em}]Android
-               \item[\hspace{1em}]Security
-               \item[\hspace{1em}]Policy languages 
-               \item[\hspace{1em}]C
-               \item[\hspace{1em}]Java
-               \item[\hspace{1em}]Assembly
-               \item[\hspace{1em}]Python
-               \item[\hspace{1em}]Ruby
-               \item[\hspace{1em}]SQL
-               \item[\hspace{1em}]Haskell
-               \item[\hspace{1em}]Java
-               \item[\hspace{1em}]Prolog
-               \item[\hspace{1em}]Datalog
-               \item[\hspace{1em}]Lisp
-               \item[\hspace{1em}]R
-               \item[\hspace{1em}]\LaTeX
-               \end{inparaitem}
+\begin{itemize}
+  \item[]
+    \sideheading{Publications}
+    \listhead{(All publications authored by Joseph Hallett and David Aspinall)}
+    \setlength\itemsep{-0.2em}
+  \item Capturing Policies for BYOD. IFIP-Sec (2017)
+  \item \emph{(Short Paper)} Common Concerns in BYOD Policies. IMPS Workshop (2017)
+  \item \emph{(Presentation)} Specifying BYOD Policies With
+    Authorization Logic.
+  \item[] iFM PhD Symposium (2016)
+  \item AppPAL for Android.  ESSoS (2016).
+  \item \emph{(Poster)} Using Authorization Logic to Capture User
+    Policies in Mobile Ecosystems.
+  \item[] SOUPS (2015)
+  \item Towards an Authorization Framework for App Security
+    Checking.
+  \item[] ESSoS Doctoral Symposium (2014).
+\end{itemize}
 
-               \vspace{2em}
-               \newpage
-               \sideheading{References}
+\begin{inparaitem}
+    \sideheading{Technical Skills}
+  \item[ \textbullet~]C and C++
+  \item[ \textbullet~]Java
+  \item[ \textbullet~]Python
+  \item[ \textbullet~]Ruby
+  \item[ \textbullet~]Shellscript
+  \item[ \textbullet~]Haskell
+  \item[ \textbullet~]SQL
+  \item[ \textbullet~]Datalog
+  \item[ \textbullet~]R
+  \item[ \textbullet~]Security
+  \item[ \textbullet~]Linux Kernel
+  \item[ \textbullet~]Android
+  \item[ \textbullet~]Policy languages 
+  \item[ \textbullet~]Git
+  \item[ \textbullet~]Radare2
+  \item[ \textbullet~]\LaTeX
+\end{inparaitem}
 
-               \newcommand{\RTitle}[1]{\small\textit{#1}}
-               \newcommand{\RName}[1]{\textbf{#1}\newline}
-               \newcommand{\RAddress}[1]{\vspace{0.5em}\newline\small{#1}}
-               \newcommand{\RNumber}[1]{\vspace{0.5em}#1\newline}
-               \newcommand{\REmail}[1]{\email{#1}}
+\vspace{2em}
+\newpage
+  \sideheading{References}
 
-               % \begin{tabular}{p{0.3\textwidth} p{0.3\textwidth} p{0.3\textwidth}}
-               %   {%
-               %   \RName{Dr{.}~Dan~Page}
-               %   \RTitle{Lecturer in Computer Science}
-               %   \RAddress{Department of Computer Science\newline
-               %   University of Bristol\newline
-               %   Merchant Venturers Building\newline
-               %   Woodland Road\newline
-               %   Bristol\newline
-               %   \postcode{BS8 1UB}\newline
-               % }
-               %   \RNumber{01173 315146}\REmail{page@cs.bris.ac.uk}
-               % }
-               %   
-               %   &
-               %   {%
-               %   \RName{Dr{.}~Ian~Holyer}
-               %   \RTitle{Personal Tutor}
-               %   \RAddress{Department of Computer Science\newline
-               %   University of Bristol\newline
-               %   Merchant Venturers Building\newline
-               %   Woodland Road\newline
-               %   Bristol\newline
-               %   \postcode{BS8 1UB}\newline
-               % }
-               %   \RNumber{01179 545148}\REmail{ian.holyer@bris.ac.uk}
-               % }
-               %   
-               % \end{tabular}
+  \newcommand{\RTitle}[1]{\small\textit{#1}}
+  \newcommand{\RName}[1]{\textbf{#1}\newline}
+  \newcommand{\RAddress}[1]{\vspace{0.5em}\newline\small{#1}}
+  \newcommand{\RNumber}[1]{\vspace{0.5em}#1\newline}
+  \newcommand{\REmail}[1]{\email{#1}}
+
+  % \begin{tabular}{p{0.3\textwidth} p{0.3\textwidth} p{0.3\textwidth}}
+  %   {%
+  %   \RName{Dr{.}~Dan~Page}
+  %   \RTitle{Lecturer in Computer Science}
+  %   \RAddress{Department of Computer Science\newline
+  %   University of Bristol\newline
+  %   Merchant Venturers Building\newline
+  %   Woodland Road\newline
+  %   Bristol\newline
+  %   \postcode{BS8 1UB}\newline
+  % }
+  %   \RNumber{01173 315146}\REmail{page@cs.bris.ac.uk}
+  % }
+  %   
+  %   &
+  %   {%
+  %   \RName{Dr{.}~Ian~Holyer}
+  %   \RTitle{Personal Tutor}
+  %   \RAddress{Department of Computer Science\newline
+  %   University of Bristol\newline
+  %   Merchant Venturers Building\newline
+  %   Woodland Road\newline
+  %   Bristol\newline
+  %   \postcode{BS8 1UB}\newline
+  % }
+  %   \RNumber{01179 545148}\REmail{ian.holyer@bris.ac.uk}
+  % }
+  %   
+  % \end{tabular}
 
 
 
-             \end{document}  
+\end{document}  
 
 
              % Local Variables:
