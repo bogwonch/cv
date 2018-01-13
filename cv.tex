@@ -4,10 +4,11 @@
 \usepackage[hidelinks]{hyperref}
 \usepackage{geometry}
 \usepackage{marginal}
-%\usepackage{microtype}
 \usepackage{marginnote}
 \usepackage[usenames,dvipsnames]{xcolor}
 \usepackage{fontspec}
+%\usepackage{sourceserifpro}
+%\usepackage{sourcecodepro}
 \usepackage{selectp}
 
 \outputonly{2}
@@ -16,7 +17,7 @@
 \setlength{\parindent}{0pt}
 \geometry{marginparwidth=1.5in, marginparsep=2em, 
   inner=7.0em,outer=1.8in, %bottom=2em, 
-  top=2em, textheight=290mm}
+  top=3em, textheight=290mm}
 
 \usepackage{enumitem}
 \usepackage{paralist}
@@ -39,6 +40,8 @@
 \newcommand{\hidethis}[1]{}
 
 \begin{document}
+\raggedright
+
 Ignore this page.  I'll get rid of it.
 \newpage
 
@@ -51,47 +54,57 @@ Ignore this page.  I'll get rid of it.
   Clifton, Bristol, \postcode{bs8 1lh} & \textsc{github:} & \href{https://www.github.com/bogwonch}{\tt github.com/bogwonch} \\
 \end{tabular}
 
-\vspace{1em}%
-\begin{tabular}{p{\textwidth}}\itshape
-%  I am a PhD student at the University of Edinburgh researching how we can use a logic of authorization to
-%  improve the security in mobile ecosystems.  My research looks at how we can
-%  write policies, for the devices and stores, that let us automate or
-%  guide the decisions making process surrounding them; and model existing
-%  informal policies.  I have experience working as a Linux
-%  security engineer for the digital television markets where I helped write the
-%  Linux and Android specifications for conditional access vendors.  My passion
-%  is for cutting edge security research and helping users and developers
-%  understand the issues and limitations of the security of their devices.
-%  Through my teaching I have helped show others just how cool security research
-%  is.
-  I am a PhD student at the University of Edinburgh expecting to submit in
-	June.  My research looks at using formal languages to model the
-	informal policies and trust relationships that surround mobile devices.
-	By doing this we were able to make precise comparisons between
-	different app stores and mobile OSs, check the extent user's privacy
-	preferences matched their behaviour, and find common areas of concern
-	in BYOD policies.  My background is in computer security; this has
-	given me the opportunities to work in a variety of areas including
-	policy languages, system engineering, embedded devices, program
-	analysis and testing.  Now I'm coming to the end of my PhD I am looking
-	to work on new problems and continue to explore and show others how
-	cool security research is.
-\end{tabular} \vspace{0.2em}
-
+%\vspace{1em}%
+%\begin{tabular}{p{\textwidth}}\itshape
+%%  I am a PhD student at the University of Edinburgh researching how we can use a logic of authorization to
+%%  improve the security in mobile ecosystems.  My research looks at how we can
+%%  write policies, for the devices and stores, that let us automate or
+%%  guide the decisions making process surrounding them; and model existing
+%%  informal policies.  I have experience working as a Linux
+%%  security engineer for the digital television markets where I helped write the
+%%  Linux and Android specifications for conditional access vendors.  My passion
+%%  is for cutting edge security research and helping users and developers
+%%  understand the issues and limitations of the security of their devices.
+%%  Through my teaching I have helped show others just how cool security research
+%%  is.
+  %I am a PhD student at the University of Edinburgh expecting to submit in
+	%June.  My research looks at using formal languages to model the
+	%informal policies and trust relationships that surround mobile devices.
+	%By doing this we were able to make precise comparisons between
+	%different app stores and mobile OSs, check the extent user's privacy
+	%preferences matched their behaviour, and find common areas of concern
+	%in BYOD policies.  My background is in computer security; this has
+	%given me the opportunities to work in a variety of areas including
+	%policy languages, system engineering, embedded devices, program
+	%analysis and testing.  Now I'm coming to the end of my PhD I am looking
+	%to work on new problems and continue to explore and show others how
+	%cool security research is.
+%\end{tabular} \vspace{0.2em}
+%
 \begin{itemize}
 \item[] 
   \sideheading{Education}%
-		\listhead{2017\hspace{1em} (Expected) PhD at Edinburgh University School of Informatics}
+		\listhead{2018\hspace{1em} (Expected) PhD at Edinburgh University School of Informatics}
   \begin{itemize}
-  \item[] Looked at how authorization logic can be used to model the informal policies surrounding the mobile ecosystem, and describe precisely the differences.  This led to full publications contrasting user's privacy preferences with their app installation habits (AppPAL for Android), and describing precisely the concerns and trust relationships in BYOD policies (Capturing Policies for BYOD).
-  \item[] Implemented \emph{AppPAL} authorization logic in Java/Haskell.
-  \item[] Supervised by Prof.~David~Aspinall
+    Users and companies have opinions and policies about how their mobile devices should be used.
+    These policies are often expressed in natural language which can be imprecise.
+    Using an authorization logic I showed how to capture and encode these policies.
+    This let me show how to enforce the policies with automatic tools.
+    It also allowed me to compare and contrast policies precisely.
+    My work during the PhD led to full publications contrasting user's privacy
+    preferences with their app installation habits (AppPAL for Android), and
+    describing precisely the concerns and trust relationships in BYOD policies
+    (Capturing Policies for BYOD).
+  \item[\textbullet] Implemented \emph{AppPAL} authorization logic in Java/Haskell.
+  \item[\textbullet] Supervised by Prof.~David~Aspinall.
+  \item[\textbullet] Examined by Dr.~Paul~Jackson and Dr.~Charles~Morisset.
+  \item[\textbullet] Currently completing corrections.
   \end{itemize}
   \listhead{2012\hspace{1em}MEng Computer Science at Bristol University (2:1)}
   \begin{itemize}
-  \item[] Specialised in cryptography and security.
-  \item[] Won the Infineon Prize for best final year project in Computer Architecture.
-  \item[] Dissertation on a steganographic method to create architecture independent bytecode.
+  \item[\textbullet] Specialised in cryptography and security.
+  \item[\textbullet] Won the Infineon Prize for best final year project in Computer Architecture.
+  \item[\textbullet] Dissertation on a steganographic method to create architecture independent bytecode.
     % Looked at the techniques to find valid instructions on multiple
     % architectures, assessed their steganographic properties, and showed how
     % a distinguisher could be written for programs using them.
@@ -102,33 +115,34 @@ Ignore this page.  I'll get rid of it.
 \begin{itemize}
 \item[] 
   \sideheading{Experience}%
+  \listhead{2017--present\hspace{1em}Java Software Engineer at SCISYS}
+  \begin{itemize}
+  \item[\textbullet] Developing mission control and operations systems for satellites.
+  \end{itemize}
   \listhead{2014--2016\hspace{1em}Teaching Assistant at Edinburgh~University}
   \begin{itemize}
-  \item[] Worked with Intel to create lab exercise using TLS securely and implementing certificate pinning in Android apps.
-  \item[] Developed new labs teaching students to perform and defend against classic stack
-    overflows, return to libc, linker attacks, injection and web vulnerabilities.
-  \item[] Working for the \emph{Computer Security} and \emph{Secure Programming Courses}.
+  \item[\textbullet] Developed new lab exercise for Intel on using TLS securely and implementing certificate pinning in Android apps.
+  \item[\textbullet] Developed new labs on defending against buffer overflows, injection and web vulnerabilities.
   \end{itemize}
   \listhead{2012–2013\hspace{1em}Security Engineer at MathEmbedded}
   \begin{itemize}
-  \item[] Developed Linux and Android security specifications for conditional access vendors.  
-  \item[] Worked on a dynamic analysis tool for assessing a system's
+  \item[\textbullet] Developed Linux and Android security specifications for conditional access vendors.  
+  \item[\textbullet] Worked on a dynamic analysis tool for assessing a system's
     conformance to the security specifications.  Helped develop a
     kernel module and rootkit to hook into the system under test, and
-    SQL database to implement the tests.  Built test framework to test the tool worked as expected on multiple architectures and OSs.
-  \item[] Updated a set-top box system to a more recent kernel. Integrated patches to
+    SQL database to implement the tests.  Built a test framework to test the tool worked as expected on multiple architectures and OSs.
+  \item[\textbullet] Updated a set-top box system to a more recent kernel. Integrated patches to
     harden system; helped port their main application from a chroot into an LXC container.
   \end{itemize}
 
-\item[] \listhead{2009–2012\hspace{1em}Teaching Assistant at
-    Bristol~University}
+\item[] \listhead{2009–2012\hspace{1em}Teaching Assistant at Bristol~University}
     \begin{itemize}
-    \item[] Procedural Programming and Principles of Programming courses
+    \item[\textbullet] Lab assistant for introductory C programming courses.
     \end{itemize}
 
 \item[] \listhead{2008\hspace{1em}Software Engineering intern at GE Oil and Gas}
   \begin{itemize}
-    \item[] Worked on testing, bugfixing, and developing coding standards for C++.
+    \item[\textbullet] Worked on testing, bugfixing, and developing coding standards for C++.
   \end{itemize}
 
 \item[] \listhead{2007\hspace{1em}Summer placement as Software Engineer at Renishaw}
@@ -143,39 +157,42 @@ Ignore this page.  I'll get rid of it.
     \sideheading{Publications}
     \listhead{(All publications authored by Joseph Hallett and David Aspinall)}
     \setlength\itemsep{-0.2em}
-  \item Capturing Policies for BYOD. IFIP-Sec (2017)
+  \item \emph{Paper} Capturing Policies for BYOD. IFIP-Sec Conference (2017)
   \item \emph{(Short Paper)} Common Concerns in BYOD Policies. IMPS Workshop (2017)
   \item \emph{(Presentation)} Specifying BYOD Policies With
     Authorization Logic.
   \item[] iFM PhD Symposium (2016)
-  \item AppPAL for Android.  ESSoS (2016).
+  \item \emph{Paper} AppPAL for Android.  ESSoS Conference (2016).
   \item \emph{(Poster)} Using Authorization Logic to Capture User
     Policies in Mobile Ecosystems.
-  \item[] SOUPS (2015)
-  \item Towards an Authorization Framework for App Security
+  \item[] SOUPS Conference (2015)
+  \item \emph{Paper} Towards an Authorization Framework for App Security
     Checking.
   \item[] ESSoS Doctoral Symposium (2014).
 \end{itemize}
 
-\begin{inparaitem}
+\begin{itemize}
+  \item[]
     \sideheading{Technical Skills}
-  \item[ \textbullet~]C and C++
-  \item[ \textbullet~]Java
-  \item[ \textbullet~]Python
-  \item[ \textbullet~]Ruby
-  \item[ \textbullet~]Shellscript
-  \item[ \textbullet~]Haskell
-  \item[ \textbullet~]SQL
-  \item[ \textbullet~]Datalog
-  \item[ \textbullet~]R
-  \item[ \textbullet~]Security
-  \item[ \textbullet~]Linux Kernel
-  \item[ \textbullet~]Android
-  \item[ \textbullet~]Policy languages 
-  \item[ \textbullet~]Git
-  \item[ \textbullet~]Radare2
-  \item[ \textbullet~]\LaTeX
-\end{inparaitem}
+    \begin{inparaitem}
+    \item[\textbullet~]Java
+    \item[ \textbullet~]C and C++
+    \item[ \textbullet~]Python
+    \item[ \textbullet~]Ruby
+    \item[ \textbullet~]Haskell
+    \item[ \textbullet~]Datalog
+    \item[ \textbullet~]R
+    \item[ \textbullet~]Linux
+    \item[ \textbullet~]Android
+    \item[ \textbullet~]Security
+    \item[ \textbullet~]Reverse Engineering
+    \item[ \textbullet~]Jenkins
+    \item[ \textbullet~]DevOps
+    \item[ \textbullet~]Policy languages 
+    \item[ \textbullet~]Git
+    \item[ \textbullet~]\LaTeX
+    \end{inparaitem}
+\end{itemize}
 
 \vspace{2em}
 \newpage
